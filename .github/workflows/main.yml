@@ -14,11 +14,10 @@ jobs:
       - name: run libraries from haxe
         run: |
           haxelib setup ~/haxelib
-          haxelib git hxcpp https://github.com/HaxeFoundation/hxcpp
+          haxelib git hxcpp https://github.com/kittycathy233/hxcpp
           chmod +x ./setup/unix.sh
           sh ./setup/unix.sh
           haxelib install extension-androidtools
-          haxelib run lime rebuild hxcpp
       - name: configure android
         run: |
           haxelib run lime config ANDROID_SDK $ANDROID_HOME
